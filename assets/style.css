@@ -21,14 +21,21 @@ header div {
   max-width: 960px;
   margin: 0 auto;
 }
-#navbarSupportedContent{
+.navbar-brand , .navbar-nav, .nav-item{
+
+  display: inline !important;
+}
+.toggler {
+  display: none;
+}
+.navbar-nav{
   float: right;
 }
-.navbar-light .navbar-brand{
+/*.navbar-light .navbar-brand{
   padding: 12px 20px;
   background-color: #393;
   color: #fff;
-}
+}*/
   /*
 #logo{
   float: left;
@@ -77,15 +84,14 @@ footer {
   bottom: 0;
   width: 100%;
   }   
-@media(max-width: 640px){
-
-}
 @media(max-width: 768px){
-
+.navbar-item, .navbar-nav{
+  display: none;
 }
-@media(max-width: 980px){
-
+.toggler{
+  display:inline;
 }
-
-
-
+.navbar-nav:hover, .navbar-nav:active{
+  display: inline;
+}
+}
