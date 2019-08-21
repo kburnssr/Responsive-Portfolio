@@ -6,58 +6,56 @@
   box-sizing: border-box;
 }
 
+html, body {
+/*  min-height: 100vh;*/
+}
+
 body {  
   font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   color: #777;
   background-color: #eee;
   font-size: 13px;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 header {
   background-color: #fff;
   border-bottom: 1px solid #999;
 }
 header div {
-  max-width: 960px;
+  /* max-width: 960px; */
   margin: 0 auto;
 }
-.navbar-brand , .navbar-nav, .nav-item{
 
-  display: inline !important;
+#navbar-brand{
+  padding: 12px 20px;
+  background-color: #393;
+  color: #fff;
+  float: left;
 }
-.toggler {
+
+#menu-item-responsive {
+  float: right;
+}
+
+#menu, #navbar-nav {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+
+li {
+  display: inline-block;
+  padding: 10px;
+}
+
+#navbar-toggler {
   display: none;
 }
-.navbar-nav{
-  float: right;
-}
-/*.navbar-light .navbar-brand{
-  padding: 12px 20px;
-  background-color: #393;
-  color: #fff;
-}*/
-  /*
-#logo{
-  float: left;
-  padding: 12px 20px;
-  text-decoration: none;
-  background-color: #393;
-  color: #fff;
-}
-/*
-nav{
-  float: right;
-}
-nav a {
-  float: left;
-  padding: 10px;
-  text-decoration: none;
-}
-*/
-section {
+
+#aboutme {
   clear: both;
-  max-width: 960px; 
-  margin: 0 auto;
+  /* max-width: 960px;  */
+  margin: 50px auto;
   padding: 20px;
 }
 section div{
@@ -84,14 +82,39 @@ footer {
   bottom: 0;
   width: 100%;
   }   
+
 @media(max-width: 768px){
-.navbar-item, .navbar-nav{
-  display: none;
+  nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: white;
+    border-bottom: solid 1px gray;
+  }
+  #navbar-toggler {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .nav-item {
+    display: block;
+    width: auto;
+    padding: 0 20px;
+  }
+
+  #navbar-toggler:focus + .hidden {
+    display: block;
+    position: static;
+  }
+  #navbar-nav:hover {
+    display: block;
+    position: static;
+  }
 }
-.toggler{
-  display:inline;
-}
-.navbar-nav:hover, .navbar-nav:active{
-  display: inline;
-}
-}
+
+
+
